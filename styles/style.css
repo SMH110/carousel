@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+}
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.carousel-wrapper button {
+  position: absolute;
+  top: calc(50% - 20px);
+  border: 1px solid #ccc;
+  background-color: rgb(233, 233, 233);
+}
+
+.carousel-wrapper button:active {
+  top: calc(50% - 19px);
+}
+
+button.next {
+  right: -30px;
+}
+button.previous {
+  left: -30px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #ccc;
+  background-color: rgb(233, 233, 233);
+  border-radius: 100px;
+  text-align: center;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.active-video {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height: 720px;
+}
+
+video {
+  width: 100%;
+}
+
+.controls-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  transform: translate(0, -55px);
+  transition: all 0.4s ease-out;
+
+}
+
+.controls-wrapper.hide {
+  transform: translate(0, 50px);
+}
+
+.controls-wrapper button {
+  width: 65px;
+  height: 65px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 2px;
+  background-color: #ffd700;
+  outline: none;
+}
+.controls-wrapper button.play {
+  background-image: url("./assets/btn-play.png");
+}
+
+.controls-wrapper button.pause {
+  background-image: url("./assets/btn-pause.png");
+}
